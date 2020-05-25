@@ -1,0 +1,73 @@
+.menu-contanier{
+    margin: 5%;
+}
+
+.help-circle{
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: orange;
+    box-shadow: inset 1px 1px 18px -8px #F5F5F5;
+    cursor: pointer;
+    position: fixed;
+    transition: all 2s;
+}
+.img{
+    width: 30px;
+    transform: translate(13px, 13px);
+}
+.menu-item{
+    width: 290px;
+    height: 28px;
+    position: relative;
+    left: 14px;
+    background-color: orange;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    animation-duration: .8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    color: black;
+    box-shadow: inset 1px 1px 18px -8px #F5F5F5;
+    position: relative;
+}
+
+.item-title{
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 15px;
+    font-family: sans-serif;
+}
+.open{
+    animation-name: open-item;
+
+}
+
+.close{
+    animation-name: close-item;
+}
+@keyframes open-item {
+   0% {bottom: -40px; width: 28px; visibility: visible; color: transparent;}
+   30% {bottom: -20px; width: 28px; visibility: visible; color: transparent;} 
+   35% {bottom: -10px; width: 28px; visibility: visible; color: transparent;}
+   40% {bottom: 0px; width: 28px; visibility: visible; color: transparent;}
+   45% {width: 28px; visibility: visible;}
+   50% {width: 72.5px; visibility: visible;}
+   70% {width: 145px; visibility: visible;}
+   100% {width: 290px; visibility: visible;}
+}
+
+
+@keyframes close-item {
+    0%   {width: 290px; visibility: visible;}
+    25%  {width: 145px; visibility: visible;}
+    50%  {width: 72.5px; visibility: visible;}
+    60% {width: 28px; visibility: visible;}
+    70% {bottom: 0px; width: 28px; visibility: visible; color: transparent;}
+    80% {bottom: -10px; width: 28px; visibility: visible; color: transparent;}
+    90% {bottom: -20px; width: 28px; visibility: visible; color: transparent;}
+    95% {bottom: -40px; width: 28px; visibility: hidden; color: transparent;}
+    100% {bottom: -60px; width: 2px; visibility: hidden; color: transparent;}
+}
+
